@@ -1,0 +1,5 @@
+.project
+certs
+./certs
+./certs/*
+node_modules

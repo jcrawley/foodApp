@@ -1,0 +1,22 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+	body
+		
+		div#sidebar
+			ul#sidebar-options
+				li
+					div.home
+						span hey
+				li
+					div.about
+						span hey
+		div#main
+			button(type="button" class="btn btn-default" aria-label="sidebar" id="sidebar-button")
+				span(class="glyphicon glyphicon-align-justify" aria-hidden="true")
+			block content
+			script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+			script(src="javascripts/sidebar.js")

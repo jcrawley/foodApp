@@ -1,0 +1,35 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#sidebar{
+	width:1%;
+	display: none;
+	min-width: 100px;
+	float: left;
+}
+
+#sidebar li{
+	list-style: none;
+}
+#sidebar li div{
+	width:100%;
+	background-color: gray;
+
+}
+
+#main{
+	width: 100%;
+	display: block;
+	position: relative;
+	float: right;
+	padding: 20px;
+}
+
+#sidebar-button{
+	display: block;
+}
