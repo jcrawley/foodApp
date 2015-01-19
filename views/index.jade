@@ -1,5 +1,31 @@
 extends layout
 
 block content
-	h1= title
-	p Welcome to #{title}
+	div.pageContainer(ng-controller="recipesController")
+		div.jumbotron
+			div.container
+				div.row
+					div.col-md-8.col-md-offset-2#title-text
+						h1 Need a recipe?
+						p List the ingredients you want to use, we'll find you something.
+				div.row
+					div.col-md-6.col-md-offset-3
+						div#ingredient-container
+							div.input-group.single-ingredient(ng-repeat='ingredient in ingredients track by $index')
+								input.form-control.ingredient-search(type="text" placeholder="What's in your pantry?" value = "{{ingredient}}")
+								span.input-group-btn
+									button.btn.btn-default.add-ingredient.ingredient-control(type="button" ng-click="addIngredient()" aria-label="test") {{ingredient? "-" : "+"}}
+						div.alert.alert-info.hidden#num-of-ingredients You must have at least one ingredient, give us something to work with! 
+						div.alert.alert-info.hidden#empty-input Nice try, no empty boxes!
+				div.row
+					div.col-md-offset-4
+						button.btn.btn-default(ng-click="getIngredients(ingredientsTest)") Go!
+		ul#listOfRecipes
+			li(ng-repeat='recipe in recipes') 
+				div.recipeCard
+					div.row
+						div.col-md-6
+							h2 {{recipe.title}}
+							img(src="{{recipe.image_url}}")
+						div.col-md-6
+							h1 PLACEHOLDER
