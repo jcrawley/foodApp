@@ -42,6 +42,17 @@ app.get("/", function (req, res) {
     });
 });
 
+app.get("/panels", function (req, res) {
+    res.render("panels", {
+      title: "What you hungry for?",
+      scripts: [
+        "/javascripts/sidebar.js",
+        "/javascripts/ingredients.js",
+        "/javascripts/cancelZoom.js"
+      ]
+    });
+});
+
 app.get("/rest/search/:params", function (req, res) {
 	var sender = res;
 	var options = {
