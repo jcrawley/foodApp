@@ -14,7 +14,8 @@ recipe.controller('recipesController', function($scope){
 
 			$(".recipeCard:first").addClass('current');
 			$scope.addClickTracker();
-			$(".jumbotron2").css('margin-top', '5%');
+			$(".container2").css('margin-top', '5%');
+			$("#title-text p").html("Not what you're looking for, try other ingredients");
 		});
 	}
 
@@ -48,10 +49,12 @@ recipe.controller('recipesController', function($scope){
 			})
 		});
 		$scope.expand = function(){
-			alert("hey");
+
 		}
 		$scope.next = function(){
-
+			recipeCard.remove();
+			$(".recipeCard:first").addClass("current");
+			$scope.addClickTracker();
 		}
 
 	};

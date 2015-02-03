@@ -8,10 +8,11 @@ block content
 					h1 Need a recipe?
 					p List the ingredients you want to use, we'll find you something.
 			div#ingredient-container
-				div.single-ingredient
-					input.form-control.ingredient-search(type="text" placeholder="Seperate Ingredients with a comma")
-					span.input-group-btn
-						button.btn.btn-default.add-ingredient.ingredient-control(type="button" ng-click="getRecipes()" aria-label="test") Let's Cook!
+				form.single-ingredient
+					div.form-group
+						input.form-control.ingredient-search(type="text" placeholder="Seperate Ingredients with a comma")
+						span.input-group-btn
+							button.btn.btn-primary#add-ingredient.ingredient-control(type="submit" ng-click="getRecipes()" aria-label="test") Let's Cook!
 			div.alert.alert-info.hidden#num-of-ingredients You must have at least one ingredient, give us something to work with! 
 			div.alert.alert-info.hidden#empty-input Nice try, no empty boxes!
 		div#card-flipper
